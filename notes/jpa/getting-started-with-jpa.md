@@ -10,5 +10,13 @@
 - Makes querying easier
 - Allows saving and updating objects
 - Easy integration with Spring Boot
-    
-    
+
+## Data Layer
+- Data layer contains repository classes
+- Repositories are responsible for interacting with the database
+- Repository layer handles CRUD operations
+- CRUD means:
+  - C → Create
+  - R → Read
+  - U → Update
+  - D → Delete
