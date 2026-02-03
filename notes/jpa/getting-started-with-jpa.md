@@ -20,3 +20,11 @@
   - R → Read
   - U → Update
   - D → Delete
+ 
+## H2 Database
+- H2 is an open-source Java SQL database
+- It is mainly used for learning and testing purposes
+- Not recommended for production projects
+- It can work as an embedded or server-based database
+- Official website: https://www.h2database.com
+
