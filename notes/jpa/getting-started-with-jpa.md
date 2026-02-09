@@ -33,4 +33,12 @@
 - Database automatically increments the ID
 - Commonly used with MySQL and H2
 
+## Defining JPA Repositories
+- Created repository interface for entity
+- Extended JpaRepository
+- Used generics: <Entity, PrimaryKeyType>
+- @Repository marks it as Spring component
+- Repository layer provides CRUD operations automatically
+
+
 
