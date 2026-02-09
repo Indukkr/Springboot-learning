@@ -40,5 +40,12 @@
 - @Repository marks it as Spring component
 - Repository layer provides CRUD operations automatically
 
+## Making Category Persistent
+- Used CategoryRepository inside service layer
+- Replaced in-memory List<> with database repository
+- Now category data is stored in database instead of memory
+- Service layer interacts with repository for CRUD operations
+
+
 
 
