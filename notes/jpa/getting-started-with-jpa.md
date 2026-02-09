@@ -28,3 +28,9 @@
 - It can work as an embedded or server-based database
 - Official website: https://www.h2database.com
 
+## ID Generation Strategy - IDENTITY
+- Used to auto-generate primary key values
+- Database automatically increments the ID
+- Commonly used with MySQL and H2
+
+
