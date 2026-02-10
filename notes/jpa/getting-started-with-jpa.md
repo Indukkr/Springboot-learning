@@ -46,6 +46,10 @@
 - Now category data is stored in database instead of memory
 - Service layer interacts with repository for CRUD operations
 
+## Using Optional in Services
+- Optimized service layer code
+- Used .orElseThrow() to handle missing data
+- Improves error handling and code readability
 
 
 
