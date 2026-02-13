@@ -28,6 +28,8 @@ Instead of manually writing getters, setters, constructors, `toString()`, `equal
 - `@RequiredArgsConstructor` – constructor for final fields  
 - `@Data` – combination of Getter + Setter + ToString + Equals + RequiredArgsConstructor
 - `@Value` - immutable version of @Data
+- `@NonNull` - Ensures a field, parameter, or method return value is not `null`
+- `@Cleanup` - Automatic resource management: Call your close() methods safely with no hassle
 - `@Builder` – implements Builder pattern
 
 
