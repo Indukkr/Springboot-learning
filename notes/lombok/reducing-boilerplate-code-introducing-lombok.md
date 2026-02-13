@@ -26,7 +26,9 @@ Instead of manually writing getters, setters, constructors, `toString()`, `equal
 - `@NoArgsConstructor` – creates no-args constructor  
 - `@AllArgsConstructor` – creates constructor with all fields  
 - `@RequiredArgsConstructor` – constructor for final fields  
-- `@Data` – combination of Getter + Setter + ToString + Equals + RequiredArgsConstructor  
-- `@Builder` – implements Builder pattern  
+- `@Data` – combination of Getter + Setter + ToString + Equals + RequiredArgsConstructor
+- - '@Value' - immutable version of @Data
+- `@Builder` – implements Builder pattern
+
 
 ---
