@@ -1,1 +1,17 @@
 # Section10: Validation in Spring Boot API | Backend Validation
+
+## Introduction to validation in spring Boot
+- validation in spring Boot are all about ensuring the data your application receives meets certain criteria before its processed
+- example password should be alphanumeric
+
+- Spring boot uses Hibernate validator
+
+## Validation in Spring Boot
+- @NotNull
+- @NotEmpty
+- @Size(min=X , max=Y)
+- @Email
+- @Min(Value) and @Max(Value)
+
+
+
