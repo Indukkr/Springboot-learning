@@ -1,0 +1,44 @@
+# Section 10: Validation in Spring Boot API | Backend Validation
+
+## Introduction to Validation in Spring Boot
+
+Validation in Spring Boot ensures that the data received by an application meets certain rules before it is processed.
+
+Example:
+- Password should be alphanumeric
+- Email should follow valid format
+- Required fields must not be null
+
+Spring Boot uses **Hibernate Validator** (implementation of Jakarta Bean Validation) for performing validations.
+
+---
+
+## Common Validation Annotations in Spring Boot
+
+- `@NotNull` → Field must not be null
+- `@NotEmpty` → Field must not be null and must contain at least one character
+- `@Size(min = X, max = Y)` → Specifies size limits for String/Collection
+- `@Email` → Validates email format
+- `@Min(value)` → Minimum numeric value allowed
+- `@Max(value)` → Maximum numeric value allowed
+
+---
+
+## Example
+
+```java
+import jakarta.validation.constraints.*;
+
+public class CategoryDTO {
+
+    @NotEmpty(message = "Category name cannot be empty")
+    private String categoryName;
+
+    @Size(min = 3, max = 20, message = "Length must be between 3 and 20")
+    private String description;
+
+    @Min(value = 1, message = "Minimum value is 1")
+    @Max(value = 100, message = "Maximum value is 100")
+    private int priority;
+}
+
