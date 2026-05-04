@@ -1,24 +1,33 @@
 package com.learning.springbootweb.controllers;
 
 import com.learning.springbootweb.dto.EmployeeDTO;
+import com.learning.springbootweb.entities.EmployeeEntity;
+import com.learning.springbootweb.repositories.EmployeeRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
 
-    @GetMapping("/employees/{employeeId}")
+    private EmployeeRepository employeeRepository;
 
-    public EmployeeDTO getEmployeeById(@PathVariable("employeeId") Long employeeId) {
-        return new EmployeeDTO(employeeId,"indu","indu@gamil.com",30, LocalDate.of(2026,4,1),true);
+    public EmployeeController(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
+
+    @GetMapping("/{employeeId}")
+    public EmployeeEntity getEmployeeById(@PathVariable("employeeId") Long employeeId) {
+        return employeeRepository.findById(employeeId).orElse(null);
     }
 
     @GetMapping
-    public String getAllEmployees(@RequestParam(required = false) Integer age,
-                                  @RequestParam(required = false) String sortBy){
-        return "age " + 30 + " " +sortBy;
+    public List<EmployeeEntity> getAllEmployees(@RequestParam(required = false) Integer age,
+                                                @RequestParam(required = false) String sortBy){
+        return employeeRepository.findAll();
     }
 
 //    @PostMapping
@@ -27,9 +36,9 @@ public class EmployeeController {
 //    }
 
     @PostMapping
-    public EmployeeDTO createEmployee(@RequestBody EmployeeDTO inputEmployee) {
-        inputEmployee.setId(10L);
-        return inputEmployee;
+    public EmployeeEntity createEmployee(@RequestBody EmployeeEntity inputEmployee) {
+
+        return employeeRepository.save(inputEmployee);
     }
 
     @PutMapping
